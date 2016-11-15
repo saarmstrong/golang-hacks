@@ -5,7 +5,11 @@ import (
 	"net/http"
 )
 
-func main() {
+var MyRobots Robots
+
+func Main() {
+
+	MyRobots = NewRobots()
 
 	router := NewRouter()
 
