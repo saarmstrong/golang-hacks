@@ -3,15 +3,16 @@ package main
 import (
 	"log"
 	"net/http"
+	"lilbot/lib"
 )
 
-var MyRobots Robots
+var MyRobots *lib.Robots
 
-func Main() {
+func main() {
 
-	MyRobots = NewRobots()
+	MyRobots = lib.NewRobots()
 
-	router := NewRouter()
+	router := lib.NewRouter(MyRobots)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
