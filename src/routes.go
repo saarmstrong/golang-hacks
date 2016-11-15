@@ -18,4 +18,10 @@ var routes = Routes{
 		"/",
 		Index,
 	},
+    Route{
+        "UpdateColor",
+        "GET",
+        "/updatecolor/{rgb}",
+        UpdateColor,
+    },
 }
