@@ -6,11 +6,11 @@ import (
 	"lilbot/lib"
 )
 
-var MyRobots *lib.Robots
+var MyRobots *lib.LilRobots
 
 func main() {
 
-	MyRobots = lib.NewRobots()
+	MyRobots = lib.NewGRobots()
 
 	router := lib.NewRouter(MyRobots)
 

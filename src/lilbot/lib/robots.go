@@ -5,20 +5,21 @@ import (
 	"github.com/hybridgroup/gobot/platforms/sphero"
 )
 
-type Robots struct {
+type LilRobots struct {
 	gbot *gobot.Gobot
 	adaptor *sphero.SpheroAdaptor
 	driver *sphero.SpheroDriver
 }
 
-func NewRobots()(r *Robots)  {
+func NewGRobots() *LilRobots {
+    r := new(LilRobots)
 	r.gbot = gobot.NewGobot()
 	r.adaptor = sphero.NewSpheroAdaptor("sphero", "/dev/tty.Sphero-YBG-AMP-SPP")
 	r.driver = sphero.NewSpheroDriver(r.adaptor, "sphero")
 	return r
 }
 
-func (r *Robots)Append(work interface{})  {
+func (r *LilRobots)Append(work interface{})  {
 	robot := gobot.NewRobot("sphero",
 		[]gobot.Connection{r.adaptor},
 		[]gobot.Device{r.driver},
@@ -27,10 +28,10 @@ func (r *Robots)Append(work interface{})  {
 	r.gbot.AddRobot(robot)
 }
 
-func (r *Robots)Start()  {
+func (r *LilRobots)Start()  {
 	r.gbot.Start()
 }
 
-func (r *Robots)Stop()  {
+func (r *LilRobots)Stop()  {
 	r.gbot.Stop()
 }

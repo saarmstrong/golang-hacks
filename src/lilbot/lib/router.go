@@ -6,9 +6,9 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var GRobot *Robots
+var GRobot *LilRobots
 
-func NewRouter(rb *Robots) *mux.Router {
+func NewRouter(rb *LilRobots) *mux.Router {
 	GRobot = rb
 	router := mux.NewRouter().StrictSlash(true)
 	for _, route := range routes {
