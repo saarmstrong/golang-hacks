@@ -1,0 +1,6 @@
+package: lilbot
+import:
+- package: github.com/hybridgroup/gobot
+  subpackages:
+    - platforms/sphero
+- package: github.com/gorilla/mux

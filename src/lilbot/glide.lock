@@ -1,0 +1,14 @@
+hash: ed1cb9fc9471e7094173f84f4358ac28e8f51f0e0d1517e04a85d85dc112daf3
+updated: 2016-11-15T19:04:50.640703729-03:00
+imports:
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/mux
+  version: 757bef944d0f21880861c2dd9c871ca543023cba
+- name: github.com/hybridgroup/gobot
+  version: 0999c23207fe8cd7ffae1d18685110bd1d8bb226
+  subpackages:
+  - platforms/sphero
+- name: github.com/tarm/goserial
+  version: b3440c3c63556c3fd67e915be3b92195bc70294a
+testImports: []
