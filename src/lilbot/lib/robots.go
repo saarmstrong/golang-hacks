@@ -19,7 +19,7 @@ func NewGRobots() *LilRobots {
 	return r
 }
 
-func (r *LilRobots)Append(work interface{})  {
+func (r *LilRobots)Add(work interface{})  {
 	robot := gobot.NewRobot("sphero",
 		[]gobot.Connection{r.adaptor},
 		[]gobot.Device{r.driver},
@@ -34,4 +34,8 @@ func (r *LilRobots)Start()  {
 
 func (r *LilRobots)Stop()  {
 	r.gbot.Stop()
+}
+
+func (r *LilRobots)SetRGB(rgb []int) {
+    r.driver.SetRGB(uint8(rgb[0]), uint8(rgb[1]), uint8(rgb[2]))
 }
